@@ -1,0 +1,30 @@
+<scroll-view scroll-y="true" scroll-with-animation="true" class="main-mine">
+  <view class="user-info" bindtap='goToLogin'>
+    <image src="{{loginUserInfo.avatarPicUrl}}" class='user-logo'></image>
+    <view class="user-item-content">
+      <view class="user-item-name">{{loginUserInfo.nickName}}</view>
+      <view class="user-item-desc">会员号:{{loginUserInfo.cardNo}}</view>
+      <view class='user-item-info'>积分:{{loginUserInfo.nowScore}}</view>
+    </view>
+  </view>
+  <view>
+    <view class="item-box" bindtap='goToOrderPage'>
+      <view class="item-manage">
+        <image src="/image/icon-mine-kaquan.png" class="item-icon"/>
+        <text class='ml-90'>卡券订单</text>
+      </view>
+    </view>
+    <view class="item-box" bindtap='goToRulesPage'>
+      <view class="item-manage">
+        <image src="/image/icon-mine-guize.png" class="item-icon"/>
+        <text class='ml-90'>积分规则</text>
+      </view>
+    </view>
+    <view class="item-box">
+      <view class="item-manage">
+        <image src="/image/icon-mine-service.png" class="item-icon"/>
+        <button open-type="contact" class="service-btn ml-90">联系客服</button>
+      </view>
+    </view>
+  </view>
+</scroll-view>

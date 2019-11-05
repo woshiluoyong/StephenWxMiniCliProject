@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "page/component/home/home",
+    "page/component/order/order",
+    "page/component/mine/mine",
+    "page/component/splash/splash",
+    "page/component/creditRules/creditRules"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "StephenWxMiniCli",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationStyle": "default",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#fff",
+    "pageOrientation": "portrait",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#F84464",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "page/component/home/home",
+        "iconPath": "image/tab-home-normal.png",
+        "selectedIconPath": "image/tab-home-focus.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "page/component/order/order",
+        "iconPath": "image/tab-order-normal.png",
+        "selectedIconPath": "image/tab-order-focus.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "page/component/mine/mine",
+        "iconPath": "image/tab-mine-normal.png",
+        "selectedIconPath": "image/tab-mine-focus.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

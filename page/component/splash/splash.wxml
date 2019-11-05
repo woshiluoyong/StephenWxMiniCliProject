@@ -1,0 +1,15 @@
+<view class='main-view'>
+  <view class='hint-info' wx:if="{{!isNotCanBuy}}">
+  本程序需要授权登陆,请在弹框中授权!
+  <button class='auth-btn' bindtap='onShowLoginDialog'>开始授权</button>
+  </view>
+  <view class='not-can-buy' wx:if="{{isNotCanBuy}}">禁购</view>
+</view>
+<loginDialog id='loginDialog'
+  title='微信Demo申请获得以下权限'
+  content='获得您的公开信息(昵称,头像等)'
+  remark='便于更好地提供相关服务'
+  confirmText='授权'
+  bind:cancelEvent='getUserInfoCancel'
+  bind:bindGetUserInfo='getUserInfoCompleted'>
+</loginDialog>

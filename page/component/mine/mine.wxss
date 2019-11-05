@@ -1,0 +1,89 @@
+@import '../../common/common.wxss';
+
+.main-mine{
+  background: #fff;
+}
+
+.user-info{
+  width: 100%;
+  height: 260rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 20rpx solid #E7E7E7;
+}
+.user-info .user-logo{
+  width: 140rpx;
+  height: 140rpx;
+  display: inline-block;
+}
+.user-info .user-item-content{
+  width: 70%;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.user-info .user-item-content .user-item-name{
+  font-size: 32rpx;
+  color: #545555;
+}
+.user-info .user-item-content .user-item-desc{
+  font-size: 32rpx;
+  color: #545555;
+  margin-top: 5rpx;
+}
+.user-info .user-item-content .user-item-info{
+  font-size: 32rpx;
+  color: #545555;
+  display: inline-block;
+  /*position: absolute;
+  right: 55rpx;
+  margin-top: -65rpx;*/
+}
+
+.item-box{
+  color: #999;
+  line-height: 120rpx;
+  font-size: 32rpx;
+}
+.item-box .item-manage{
+  position: relative;
+  height: 120rpx;
+  text-align: left;
+  padding-left: 60rpx;
+}
+.item-box .item-manage text{
+  color: #545555;
+}
+.item-box .item-manage .item-icon{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  position: absolute;
+  margin-top: 35rpx;
+}
+.item-box .item-manage::after{
+  position: absolute;
+  right: 60rpx;
+  top: 50rpx;
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 4rpx solid #545555;
+  border-right: 4rpx solid #545555;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.item-box .item-manage .service-btn{
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+  padding-top: 20rpx;
+  padding-left: 0rpx;
+  text-align: left;
+  color: #545555;
+  font-size: 32rpx;
+  background: transparent;
+}
+.item-box .item-manage .service-btn::after {
+  border: none;
+}

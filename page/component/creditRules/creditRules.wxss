@@ -1,0 +1,8 @@
+@import '../../common/common.wxss';
+
+.main-service{
+  font-size: 32rpx;
+  color: #777777;
+  padding: 50rpx 40rpx 0rpx 40rpx;
+  background: #fff;
+}

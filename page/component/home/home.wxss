@@ -1,0 +1,269 @@
+@import '../../common/common.wxss';
+
+.main-list-pt{
+  padding-top:30px;
+}
+.topHintText{
+  background: #F84464;
+  color:white;
+  font-size: 30rpx;
+  padding: 20rpx 20rpx 25rpx 20rpx;
+}
+.swiper{
+  height: 300rpx;
+}
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+.centerNav{
+  background: white;
+  height: 120rpx;
+  border-bottom: 3rpx solid #E1E1E1;
+}
+.centerNav .nav {
+  height: 100%;
+  width: 93%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 35rpx 10rpx 10rpx 10rpx;
+  background: white;
+  white-space: nowrap;
+  z-index: 99;
+}
+.centerNav .nav .nav-item {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  font-size: 33rpx;
+}
+.centerNav .nav .nav-item .nav-indicator{
+  width: 100%;
+  height: 2rpx;
+  background: #F84464;
+}
+.centerNav .nav .nav-item.active{
+  color: #BD171F;
+}
+.centerNav .nav-right-ly{
+  position: relative;
+  margin-top: -80rpx;
+}
+.centerNav .nav-right-ly .nav-right-icon{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+  right: 18rpx;
+}
+.positionFixed{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.fixedTopNav{
+  background: white;
+}
+.fixedTopNav .nav-top-ly{
+  position: relative;
+  padding: 15rpx 25rpx;
+  border-bottom: 3rpx solid #E1E1E1;
+}
+.fixedTopNav .nav-top-ly.nav-top-ly-shadow{
+  box-shadow: 0rpx 3rpx 3rpx #E1E1E1;
+}
+.fixedTopNav .nav-top-ly .nav-left-icon{
+  width: 45rpx;
+  height: 45rpx;
+  display: inline-block;
+}
+.fixedTopNav .nav-top-ly .nav-top-title{
+  position: absolute;
+  margin-top: 2rpx;
+  margin-left: 15rpx;
+}
+.fixedTopNav .nav-top-ly .nav-right-icon{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+  right: 18rpx;
+  margin-top: 8rpx;
+}
+.fixedTopNav .grids {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0rpx 5rpx 5rpx #E1E1E1;
+}
+.fixedTopNav .grids .grid {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding-top: 20rpx;
+}
+.fixedTopNav .grids .grid .grid-bg {
+  position: relative;
+  float: left;
+  padding: 0px 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.fixedTopNav .grids .grid .grid-bg .grid-label{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 33rpx;
+  color: black;
+}
+.fixedTopNav .grids .grid .grid-bg .nav-indicator{
+  width: 80%;
+  height: 2rpx;
+  margin-left: 10%;
+  background: #F84464;
+}
+
+.mainTypeList{
+  padding: 2rpx 20rpx 100rpx 20rpx;
+}
+.mainTypeList .type-title{
+  font-size: 33rpx;
+  color: #F84464;
+  padding: 20rpx 0rpx;
+}
+.mainTypeList .type-title.mt-nav{
+  margin-top: 200rpx;
+}
+.mainTypeList .type-item{
+  width: 100%;
+  height: 310rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1rpx solid #AAAAAA;
+}
+.mainTypeList .type-item .item-logo{
+  width: 160rpx;
+  height: 160rpx;
+  display: inline-block;
+}
+.mainTypeList .type-item .type-item-content{
+  width: 70%;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.mainTypeList .type-item .type-item-content .type-item-name{
+  font-size: 32rpx;
+  color: #000000;
+}
+.mainTypeList .type-item .type-item-content .type-item-desc{
+  font-size: 28rpx;
+  color: #555555;
+  margin-top: 5rpx;
+  overflow: hidden;
+  height: 120rpx;
+}
+.mainTypeList .type-item .type-item-content .type-item-info{
+  margin-top: 25rpx;
+}
+.mainTypeList .type-item .type-item-content .type-item-info .item-price{
+  font-size: 36rpx;
+  color: #F84464;
+}
+.mainTypeList .type-item .type-item-content .type-item-info .item-btn{
+  font-size: 26rpx;
+  background: #F84464;
+  color: #fff;
+  letter-spacing: 10rpx;
+  position: absolute;
+  right: 20rpx;
+  margin-top: 0rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  z-index: 98;
+}
+.mainTypeList .type-item .type-item-content .type-item-info .item-btn.item-btn-left{
+  right: 180rpx;
+  letter-spacing: 1rpx;
+}
+.mainTypeList .type-item .type-item-content .type-item-info .item-btn.item-btn-disable{
+  color: #F84464;
+  background: #fff;
+  border: none;
+}
+
+.guide-container .guide-mask{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.guide-container .guide-info{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 6000;
+  text-align: center;
+  padding-left: 110rpx;
+  padding-right: 110rpx;
+}
+.guide-container .guide-info .up-hand{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 15%;
+}
+.guide-container .guide-info .guide-head{
+  font-size: 38rpx;
+  color: #fff;
+  margin-top: 150rpx;
+}
+.guide-container .guide-info .guide-title{
+  width:80%;
+  margin-left:10%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #757876;
+  background: #eceeed;
+  margin-top: 30rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.guide-container .guide-info .guide-content{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  color: #332c2f;
+  background: #fefefe;
+  border-radius: 10rpx;
+}
+.guide-container .guide-info .guide-remark{
+  width:80%;
+  margin-left:10%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #757876;
+  background: #eceeed;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+.guide-container .guide-btn{
+  width: 250rpx;
+  margin-top: 60rpx;
+  font-size: 34rpx;
+  color: #fff;
+  background: transparent;
+  border-radius: 40rpx;
+  border: 1rpx solid #fff;
+}
+.guide-container .guide-btn::after{
+  border: none;
+}

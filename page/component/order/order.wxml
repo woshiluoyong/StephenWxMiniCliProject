@@ -1,0 +1,36 @@
+<scroll-view scroll-y="true" scroll-with-animation="true" class="main-view {{orderList && orderList.length > 0 ? '' : 'is-load'}}">
+  <view class="top-image" wx:if="{{topImgUrl && topImgUrl.length > 0}}">
+    <image src="{{topImgUrl}}"/>
+  </view>
+  <view class='order-list' wx:if="{{orderList && orderList.length > 0}}">
+    <block wx:for="{{orderList}}" wx:for-index wx:key="idx">
+      <view class="order-item {{0 == index ? 'mt-10' : 'mt-15'}} {{2 == item.state || 2 == item.refundState ? 'ok-bg' : ''}}" data-item="{{item}}" bindtap='goToOrderDetails'>
+        <view class='order-title pt-15 pb-15 ta'>
+          <view class='goods-name dl fl'>{{item.commodityName}}</view>
+          <view class="goods-total dl fr">￥{{item.payPrice}}</view>
+        </view>
+        <view class='order-title pt-15 pb-15 ta'>
+          <view class='goods-num dl'>数量：{{item.buyCount}}</view>
+          <view class='back-money dl'>{{item.refunMoney > 0 ? ('退款：￥'+item.refunMoney) : ''}}</view>
+          <view class="goods-total credit-num dl">
+            {{item.retireScore > 0 ? ('积分：'+item.retireScore) : ''}}
+          </view>
+        </view>
+        <view class="order-content mt-10 {{item.isOk ? 'is-ok' : 'not-ok'}}">
+          <image src="{{item.commodityPicUrl}}" class="order-logo {{2 == item.refundState ? 'is-not-btn' : ''}}"></image>
+          <view class="order-item-content">
+            <view class="order-item-name">订单号：{{item.orderFormNo}}</view>
+            <view class="order-item-desc">购买时间：{{item.createTime ? item.createTime : ''}}</view>
+            <view class="order-item-desc {{(2 == item.state || 2 == item.refundState) ? '' : 'ok-color'}}">有效期至：{{item.validityPeriod ? item.validityPeriod : '暂无'}}</view>
+            <image src="/image/icon-completed.png" class="complete-order" wx:if="{{2 == item.state && 2 != item.refundState}}"/>
+            <view class="order-item-info">
+              <button class='item-btn' size="mini" data-item="{{item}}" catchtap='goToViewCardPwd' wx:if="{{(1 == item.state || 2 == item.state) && 2 != item.refundState}}">查看卡券</button>
+              <button class='item-btn ml-35' size="mini" data-item="{{item}}" catchtap='goToReceiveGoods' wx:if="{{2 != item.state && 2 != item.refundState}}">确认收货</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='ta c-gray f-28' wx:else>暂无订单</view>
+</scroll-view>

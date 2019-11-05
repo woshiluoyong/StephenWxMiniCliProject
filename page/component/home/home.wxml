@@ -1,0 +1,81 @@
+<scroll-view bindscroll='onLayoutScroll' scroll-y="true" scroll-top="{{setScrollTop}}" scroll-into-view="{{setScrollView}}" style="height: {{windowHeight}}px;" scroll-with-animation='true' class="{{(navFixed || isTopNav) ? 'main-list-pt' : ''}}">
+  <official-account class='officialArea'></official-account>
+  <view class='topHintText ta' wx:if="{{topHintText && topHintText.length > 0}}">
+    <text decode="{{true}}">{{topHintText}}</text>
+  </view>
+
+  <view class="mt-7 bannerImgs" wx:if="{{bannerImgs && bannerImgs.length > 0}}">
+    <swiper class="swiper" autoplay="true" interval="3000" duration="800" circular="true">
+      <block wx:for="{{bannerImgs}}" wx:key="{{index}}">
+          <swiper-item>
+              <image src="{{item.picUrl}}" class="slide-image" width="100%" bindtap='onBannerClick' data-item="{{item}}"/>
+          </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="centerNav {{navFixed ? 'positionFixed' : ''}}" wx:if="{{navData && navData.length > 0 && !isTopNav}}">
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+      <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+        <view class="nav-item" data-current="{{idx}}" bindtap="onClickCenterNav">
+          <view>{{navItem}}</view>
+          <view wx:if="{{curNavIndex == idx}}" class='nav-indicator mt-5'></view>
+        </view>
+      </block>
+    </scroll-view>
+    <view class="nav-right-ly" wx:if="{{navData.length > 0}}">
+      <image src="/image/icon-down.png" class="nav-right-icon" bindtap='onShowTopNav'/>
+    </view>
+  </view>
+
+  <view class="fixedTopNav {{isTopNav ? 'positionFixed' : ''}}" wx:else>
+    <view class="nav-top-ly {{isTopNavColl ? 'nav-top-ly-shadow' : ''}}" wx:if="{{navData && navData.length > 0}}">
+      <image src="/image/icon-menu.png" class="nav-left-icon"/>
+      <text class="nav-top-title">全部分类</text>
+      <image src="/image/icon-down.png" class="nav-right-icon" bindtap='onTopNavCollapse' wx:if="{{isTopNavColl}}"/>
+      <image src="/image/icon-up.png" class="nav-right-icon" bindtap='onTopNavCollapse' wx:else/>
+    </view>
+    <view class="grids" hidden="{{isTopNavColl}}">
+        <view class="grid" wx:for="{{navData}}" wx:key="index" wx:for-index="bindex">
+          <view class='grid-bg' bindtap='onClickTopGridNav' data-bindex='{{bindex}}'>
+              <text class="grid-label">{{item}}</text>
+              <view wx:if="{{curNavIndex == bindex}}" class='nav-indicator mt-10'></view>
+            </view>
+        </view>
+    </view>
+  </view>
+
+  <view class="mainTypeList">
+    <view wx:for="{{mainListData}}" wx:for-index="groupIndex" wx:for-item="groupItem" wx:key="groupIndex" id="typeItem{{groupIndex}}">
+      <view class="type-title" id="typeFlag{{groupIndex}}">{{groupItem.commodityGroupName}}</view>
+        <view wx:for="{{groupItem.commodityList}}" wx:for-index="goodsIndex" wx:for-item="goodsItem" wx:key="goodsIndex" class="type-item" bindtap="goToGoodsDetails" data-item="{{goodsItem}}">
+            <image src="{{goodsItem.commodityPicUrl}}" class='item-logo'></image>
+            <view class="type-item-content">
+              <view class="type-item-name">{{goodsItem.commodityName ? goodsItem.commodityName : ''}}</view>
+              <view class="type-item-desc">{{goodsItem.commodityDesc ? goodsItem.commodityDesc : ''}}</view>
+              <view class="type-item-info">
+                <text class="item-price">{{goodsItem.sellPrice ? '￥'+goodsItem.sellPrice : ''}}</text>
+                <form bindsubmit="goToChangeRemind" data-indexs="{{groupIndex}}-{{goodsIndex}}" report-submit='true' wx:if="{{goodsItem.sellCount <= 0}}">
+                  <button class='item-btn item-btn-left' form-type="submit" type="default" size="mini">{{(1 == goodsItem.isSubmitnoticeArrival) ? '取消提醒' : '到货提醒'}}</button>
+                </form>
+                <!--button class='item-btn item-btn-left' size="mini" catchtap='goToChangeRemind' data-indexs="{{groupIndex}}-{{goodsIndex}}" wx:if="{{goodsItem.sellCount >= 0}}">
+                  {{(1 == goodsItem.isSubmitnoticeArrival) ? '取消提醒' : '到货提醒'}}
+                </button-->
+                <button class="item-btn {{goodsItem.sellCount > 0 ? '' : 'item-btn-disable'}}" size="mini" catchtap='goToBuyGoods' data-item="{{goodsItem}}">{{(goodsItem.sellCount > 0) ? '购买' : '缺货'}}</button>
+              </view>
+            </view>
+        </view>
+    </view>
+  </view>
+</scroll-view>
+<view class='guide-container' hidden="{{!isShowGuide}}">
+  <view class='guide-mask'></view>
+  <view class='guide-info'>
+    <image src="/image/icon-hand.png" class="up-hand"/>
+    <view class='guide-head'>点击 ⌈添加到我的小程序⌋ 随时访问</view>
+    <view class='guide-title'>转发</view>
+    <view class='guide-content'>添加到我的小程序</view>
+    <view class='guide-remark'>关于微信Demo</view>
+    <button class='guide-btn' bindtap='onCloseGuidePage'>我知道了</button>
+  </view>
+</view>

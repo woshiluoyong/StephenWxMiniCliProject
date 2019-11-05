@@ -1,0 +1,7 @@
+<view class="main-service">
+  <view><text decode="{{true}}">{{ruleInfo || '暂无规则'}}</text></view>
+  <!--view class='mt-20'>2.积分可直接抵扣、也可以用于换购。换购方式为：微信商城价-积分抵扣金额=商品换购价格（即支付价格）。积分最多可抵扣当前商品金额的20%</view>
+  <view class='mt-20'>3.积分只能用于购买、换购使用，不得转赠他人。</view>
+  <view class='mt-20'>4.在微信小程序成功购买商品，并签收后，积分将自动赠予到本人账户，可在我的积分中查看。</view>
+  <view class='mt-20'>5.微信将不定期推出积分兑换活动或积分兑换套餐。</view-->
+</view>

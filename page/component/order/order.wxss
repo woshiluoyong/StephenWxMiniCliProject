@@ -1,0 +1,121 @@
+@import '../../common/common.wxss';
+.main-view{
+  background: #E7E7E7;
+}
+.main-view.is-load{
+  background: #fff;
+}
+
+.top-image{
+  width: 100%;
+  height: 200rpx;
+  background: white;
+}
+.top-image image{
+  width: 100%;
+  height: 100%;
+}
+
+.order-list{
+  width: 100%;
+  padding-bottom: 50rpx;
+}
+.order-list .order-item{
+  height: 380rpx;
+  padding: 0rpx 25rpx;
+  background: #fff;
+}
+.order-list .order-item.ok-bg{
+  background: #f7f7f7;
+}
+.order-list .order-item .order-title{
+  width: 100%;
+  height: 30rpx;
+}
+.order-list .order-item .order-title .goods-name{
+  font-size: 35rpx;
+  color: #000000;
+}
+.order-list .order-item .order-title .goods-total{
+  font-size: 36rpx;
+  color: #000000;
+  display:inline-block;
+  /*position: absolute;
+  right: 25rpx;
+  margin-top: -50rpx;*/
+}
+.order-list .order-item .order-title .goods-num{
+  width: 33.3%;
+  font-size: 32rpx;
+  color: #000000;
+  text-align: left;
+}
+.order-list .order-item .order-title .back-money{
+  width: 33.3%;
+  font-size: 32rpx;
+  color: #000000;
+}
+.order-list .order-item .order-title .goods-total.credit-num{
+  width: 33.3%;
+  font-size: 32rpx;
+  text-align: right;
+}
+
+.order-list .order-item .order-content{
+  width:100%;
+  padding-top: 20rpx;
+}
+.order-list .order-item .order-content.not-ok{
+  border-top: 1rpx dashed #aaaaaa;
+}
+.order-list .order-item .order-content.is-ok{
+  border-top: 1rpx dashed #c9c9c9;
+}
+.order-list .order-item .order-logo{
+  width: 160rpx;
+  height: 160rpx;
+  display: inline-block;
+  border-right: 1rpx solid #f6f6f6;
+  position: relative;
+  top: -32rpx;
+}
+.order-list .order-item .order-logo.is-not-btn{
+  top: 18rpx;
+}
+.order-list .order-item .order-item-content{
+  width: 65%;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+.order-list .order-item .order-item-content .order-item-name{
+  font-size: 32rpx;
+  color: #000000;
+}
+.order-list .order-item .order-item-content .order-item-desc{
+  font-size: 30rpx;
+  color: #000000;
+  margin-top: 5rpx;
+}
+.order-list .order-item .order-item-content .order-item-desc.ok-color{
+  color: #F84464;
+}
+.order-list .order-item .order-item-content .complete-order{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 20rpx;
+  margin-top: -100rpx;
+}
+.order-list .order-item .order-item-content .order-item-info{
+  margin-top: 10rpx;
+}
+.order-list .order-item .order-item-content .order-item-info .item-btn{
+  font-size: 26rpx;
+  background: #fff;
+  color: #000;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  border: 1rpx solid #000;
+  border-radius: 50rpx;
+  z-index: 98;
+}

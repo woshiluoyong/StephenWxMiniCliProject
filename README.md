@@ -8,7 +8,7 @@
 
 > 具体clone项目体验绝对巴适!
 
-### 如果有任何使用问题,可联系我微信(请备注"来自github"),热枕为您解答
+### 如果有任何使用问题,可扫码以下微信二维码联系我(请备注"来自github"),热枕为您解答
 ![作者二维码](https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/my_wx_code.jpg)
 
 ## Use Setup

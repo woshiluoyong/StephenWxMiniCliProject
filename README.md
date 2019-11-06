@@ -21,8 +21,8 @@ git clone https://github.com/woshiluoyong/StephenWxMiniCliProject.git
 
 >> ### 最后，展示截图(如果截图抽风没展示出来，请在screenShot文件夹下查看):
 <p>
-	<img src="https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/1.png" alt="活力生活截图"  width="200" height="400">
-    <img src="https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/2.png" alt="活力生活截图"  width="200" height="400">
-    <img src="https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/3.png" alt="活力生活截图"  width="200" height="400">
-    <img src="https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/4.png" alt="活力生活截图"  width="200" height="400">
+	<img src="https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/1.png" alt="活力生活截图"  width="200" height="350">
+    <img src="https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/2.png" alt="活力生活截图"  width="200" height="350">
+    <img src="https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/3.png" alt="活力生活截图"  width="200" height="350">
+    <img src="https://github.com/woshiluoyong/StephenWxMiniCliProject/blob/master/screenShot/4.png" alt="活力生活截图"  width="200" height="350">
 </p>
